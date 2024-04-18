@@ -66,6 +66,7 @@ NOTE: ngrok can timeout. you need to restart the session if you see a session ex
 ================================
 Steps to Run the Project : 
 ================================
+Run mysql work bech and start the serve. Import the 
 1. Complete DialogFlow chatbot and enable web hook in Fullfillment section
 2. Run Backend server using "python -m uvicorn main:app --reload" or "uvicorn main:app --reload" if dependencies are resolved.
 3. pick the url given by uvicorn and paste it in webhook section it should be something like 127.0.0.1:<port number>, which is also localhost ip so you can simply copy and paste http://localhost:8000 .
