@@ -41,6 +41,7 @@ def insert_order_tracking(order_id, status):
     cnx.commit()
     cursor.close()
 
+# Function to calculate total order price for the order
 def get_total_order_price(order_id):
     cursor = cnx.cursor()
     query = f"SELECT get_total_order_price({order_id})"
@@ -76,11 +77,3 @@ def get_order_status(order_id):
         return result[0]
     else:
         return None
-
-
-if __name__ == "__main__":
-    # print(get_total_order_price(56))
-    # insert_order_item('Samosa', 3, 99)
-    # insert_order_item('Pav Bhaji', 1, 99)
-    # insert_order_tracking(99, "in progress")
-    print(get_next_order_id())
